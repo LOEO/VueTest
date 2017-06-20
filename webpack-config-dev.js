@@ -13,12 +13,25 @@ module.exports = {
         new htmlWebpackPlugin({
             template: "./src/index.html",
             title: "Test Vue"
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin() //热加载插件
     ],
     devServer: {
         contentBase: "./dist",
         colors: true,
         inline: true,
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
+    },
+    module: {
+        loaders: [{
+                test: /\.json$/,
+                loader: "json-loader"
+            },
+            {
+                test: /\.css$/,
+                loader: "style!css"
+            }
+        ]
     }
 }
