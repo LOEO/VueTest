@@ -67,9 +67,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-function main() {
-    console.info("info");
-}
+eval("function main() {\r\n    console.info(\"info\");\r\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9qcy9tYWluLmpzP2M0NWIiXSwic291cmNlc0NvbnRlbnQiOlsiZnVuY3Rpb24gbWFpbigpIHtcclxuICAgIGNvbnNvbGUuaW5mbyhcImluZm9cIik7XHJcbn1cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3NyYy9qcy9tYWluLmpzXG4vLyBtb2R1bGUgaWQgPSAwXG4vLyBtb2R1bGUgY2h1bmtzID0gMCJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///0\n");
 
 /***/ })
 /******/ ]);
