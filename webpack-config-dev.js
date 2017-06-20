@@ -1,5 +1,6 @@
 let path = require("path");
 let htmlWebpackPlugin = require("html-webpack-plugin");
+let webpack = require("webpack");
 module.exports = {
     entry: {
         main: "./src/js/main.js"
@@ -18,7 +19,6 @@ module.exports = {
     ],
     devServer: {
         contentBase: "./dist",
-        colors: true,
         inline: true,
         historyApiFallback: true,
         hot: true
