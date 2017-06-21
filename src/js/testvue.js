@@ -1,4 +1,5 @@
 import Vue from "vue";
+import "./component/todo";
 var app = new Vue({
     el: '#app',
     data: {
@@ -31,7 +32,7 @@ var app3 = new Vue({
         message: "逆转"
     },
     methods: {
-        reverse: function() {
+        reverse: function () {
             this.message = this.message.split("").reverse().join("");
         }
     }
@@ -43,3 +44,24 @@ var app4 = new Vue({
         message: "hello"
     },
 });
+
+var app5 = new Vue({
+    el: "#app5",
+    data: {
+        url:"www.baidu.com",
+        rawId: "aaa",
+        groceryList: [
+            { text: 1 },
+            { text: 2 },
+            { text: 3 },
+            { text: 4 },
+            { text: 5 }
+        ]
+    },
+    filters: {
+        formateId: function (value) {
+            console.log(value);
+            return value+"bbb";
+        }
+    }
+})

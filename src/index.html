@@ -10,13 +10,12 @@
 
 <body>
     <div id="app">
-        <span v-bind:title="message">sss</span>
-        {{ message }}
+        <span v-bind:title="message">sss</span> {{ message }}
     </div>
     <div id="app2" v-if="seen">
         显示
     </div>
-    <ul id="todo" >
+    <ul id="todo">
         <li v-for="item in list">{{item.name}}:{{item.text}}</li>
     </ul>
     <div id="app3">
@@ -26,8 +25,19 @@
     <div id="app4">
         <div>{{message}}</div>
         <input type="text" v-model="message">
-
-        
     </div>
+    <ol id="app5">
+        <!-- 完整语法 -->
+        <a v-bind:href="url">{{url}}</a>
+        <!-- 缩写 -->
+        <a :href="url">{{url}}</a>
+        <!--v-on完整写法-->
+        <a v-on:click="alert(1)">click</a>
+        <!--缩写-->
+        <a @click="alert(2)">click</a>
+        <div v-bind:id="rawId | formateId"></div>
+        <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+    </ol>
 </body>
+
 </html>
