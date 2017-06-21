@@ -1,4 +1,6 @@
-var conf = require("../../conf.json");
+import conf from "../../conf.json";
+import "./testvue";
+import "../style/css/main.css"
 
 function main() {
     console.log(conf.greetText);

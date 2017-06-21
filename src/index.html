@@ -9,7 +9,25 @@
 </head>
 
 <body>
-    index
-</body>
+    <div id="app">
+        <span v-bind:title="message">sss</span>
+        {{ message }}
+    </div>
+    <div id="app2" v-if="seen">
+        显示
+    </div>
+    <ul id="todo" >
+        <li v-for="item in list">{{item.name}}:{{item.text}}</li>
+    </ul>
+    <div id="app3">
+        <div>{{message}}</div>
+        <button v-on:click="reverse">逆转</button>
+    </div>
+    <div id="app4">
+        <div>{{message}}</div>
+        <input type="text" v-model="message">
 
+        
+    </div>
+</body>
 </html>
