@@ -12,10 +12,10 @@ module.exports = {
     devtool: "cheap-eval-source-map",
     plugins: [
         new htmlWebpackPlugin({
-            css:"./src/style/css/main.css",
+            css: "./src/style/css/main.css",
             template: "./src/index.html",
             title: "Test Vue",
-            output:"[name]-[hash].html"
+            output: "[name]-[hash].html"
         }),
         new webpack.HotModuleReplacementPlugin() //热加载插件
     ],
@@ -27,21 +27,21 @@ module.exports = {
     },
     module: {
         loaders: [{
-            test: /\.json$/,
-            loader: "json-loader"
-        },
-        {
-            test: /\.css$/,
-            loader: "style-loader!css-loader"
-        },
-        {
-            test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
-            loader: "babel-loader",
-            options: {
-                presets: ['env']
+                test: /\.json$/,
+                loader: "json-loader"
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
+            },
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: "babel-loader",
+                query: {
+                    presets: ['env']
+                }
             }
-        }
 
         ]
     },
