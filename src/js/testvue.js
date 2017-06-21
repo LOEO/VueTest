@@ -1,4 +1,4 @@
-import Vue from "vue";
+import Vue from "Vue";
 var app = new Vue({
     el: '#app',
     data: {
@@ -31,7 +31,7 @@ var app3 = new Vue({
         message: "逆转"
     },
     methods: {
-        reverse: function () {
+        reverse: function() {
             this.message = this.message.split("").reverse().join("");
         }
     }
