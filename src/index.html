@@ -37,7 +37,24 @@
         <a @click="alert(2)">click</a>
         <div v-bind:id="rawId | formateId"></div>
         <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+        <!-- v-if -->
+        <div v-if="username">
+            <label>username</label>
+            <input name="bbb" placeholder="username">
+        </div>
+        <div v-else="username">
+            <label>email</label>
+            <input name="sss" class="aaa" placeholder="email">
+        </div>
+        <button @click="toggle">toggle</button>
     </ol>
+
+    <div id="todoList">
+        <input v-model="text" v-on:keyup.enter="addItem">
+        <ol>
+            <li is="todo-list-item" v-for="(todo,index) in todoItems" v-bind:todo="todo" v-on:remove="todoItems.splice(index,1)"></li>
+        </ol>
+    </div>
 </body>
 
 </html>
