@@ -1,5 +1,6 @@
 import Vue from "vue";
 import "./component/todo";
+import "./component/todolist";
 var app = new Vue({
     el: '#app',
     data: {
@@ -48,7 +49,8 @@ var app4 = new Vue({
 var app5 = new Vue({
     el: "#app5",
     data: {
-        url:"www.baidu.com",
+        username: true,
+        url: "www.baidu.com",
         rawId: "aaa",
         groceryList: [
             { text: 1 },
@@ -58,10 +60,34 @@ var app5 = new Vue({
             { text: 5 }
         ]
     },
+    methods: {
+        toggle: function () {
+            this.username = !this.username;
+        }
+    },
     filters: {
         formateId: function (value) {
             console.log(value);
-            return value+"bbb";
+            return value + "bbb";
         }
     }
-})
+});
+
+var todoList = new Vue({
+    el:"#todoList",
+    data:{
+        text:"11",
+        todoItems:[
+            "吃饭",
+            "上厕所",
+            "睡觉"
+        ]
+    },
+    methods:{
+        addItem:function(){
+            if(this.text==="") return;
+            this.todoItems.push(this.text);
+            this.text="";
+        }
+    }
+});
